@@ -1,0 +1,35 @@
+.todoItem_container .row {
+    display: flex;
+    justify-content: space-between;
+    width: 305px;
+    align-items: center;
+    margin:  8px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+   
+}
+
+.todoItem_container .col {
+    text-align: left;
+    color: rgba(255, 255, 255, 0.74);
+    margin-right: 20px;
+    White-space: nowrap;
+    Overflow: hidden;
+    Text-overflow: ellipsis; 
+}
+
+.todoItem_container .btn_container {
+    display: flex;
+    font-size: 15px;
+}
+
+.todoItem_container .btn_edit,
+.todoItem_container .btn_delete {
+    padding: 3px 6px;
+    font-size: 18px;
+    background-color: transparent;
+    color: #ccc;
+    border: none;
+    margin-right: 5px;
+}
