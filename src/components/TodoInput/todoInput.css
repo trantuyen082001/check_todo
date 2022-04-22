@@ -11,12 +11,12 @@
 
 .input_todo,
 .todo_input {
-    height: 30px;
-    width: 270px;
+    height: 40px;
+    width: 283px;
     border-radius: 10px;
-    margin-right: 10px;
     padding: 15px;
     font-size: 17px;
+    margin: 10px;
 }
 
 .btn_todo {
@@ -24,4 +24,5 @@
     padding: 5px;
     font-weight: bold;
     border-radius: 10px;
+    cursor: pointer;
 }

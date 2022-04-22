@@ -23,7 +23,7 @@ const TodoItem = ({todo}) => {
               {editTable ? <input 
                 type='text' 
                 value={name} 
-                className='todo_input'
+                className='todoItem_input'
                 onChange={(e) => setName(e.target.value)}
               /> : <h4>{todo.data}</h4>}
             </div>
