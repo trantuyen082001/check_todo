@@ -27,13 +27,13 @@ export const todoReducers = (state = todos, action) => {
                     break;
                 }
             }           
-            if(index != -1) {
+            if(index !== -1) {
                 newTodos[index] = action.payload;
                 return newTodos
             }
         case DELETE_TODO:
             newTodos = [...state];
-            newTodos = newTodos.filter(todo => todo.id != action.payload);
+            newTodos = newTodos.filter(todo => todo.id !== action.payload);
             return newTodos;
         default: 
             return state;
