@@ -12,14 +12,17 @@ const TodoInput = () => {
     inputRef.current.focus();
   })
 
+  // if(!name.text || /^\s*$/.test(name.text)) {
+  //   console.log('00000')
+  // }
+
   const enterValue = async(e) => {
-    if(e.key === 'Enter') {
-      setName(e.target.value)
-      dispatch(addTodo({
-        id: new Date().getTime().toString(),
-        data: name
-      }), setName(''))
-    }
+    if(e.key === 'Enter') { 
+        dispatch(addTodo({
+          id: new Date().getTime().toString(),
+          data: name
+        }), setName(''))
+      }
   }
 
   return (
@@ -38,7 +41,7 @@ const TodoInput = () => {
             <button
               className='btn_todo'
               onClick={() => {
-                dispatch(addTodo({
+                dispatch(addTodo({ 
                   id: new Date().getTime().toString(),
                   data: name
                 }), setName(''))

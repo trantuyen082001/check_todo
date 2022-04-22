@@ -5,7 +5,6 @@ import {useSelector} from 'react-redux'
 const TodoList = () => {
 
   let todos = useSelector(state => state.todoList)
-  console.log(todos)
 
   return (
     <div className='todoList_Container'>

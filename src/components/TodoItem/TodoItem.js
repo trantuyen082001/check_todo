@@ -13,7 +13,16 @@ const TodoItem = ({todo}) => {
   const [name, setName] = useState(todo.data);
 
   const dispatch = useDispatch();
-  console.log(todo)
+
+  const enterValue = async(e) => {
+    if(e.key === 'Enter') {
+      setName(e.target.value)
+      dispatch(updateTodo({
+        ...todo,
+        data: name
+      }))
+    }
+  }
   
   return (
       
@@ -24,6 +33,7 @@ const TodoItem = ({todo}) => {
                 type='text' 
                 value={name} 
                 className='todoItem_input'
+                onKeyPress={enterValue}
                 onChange={(e) => setName(e.target.value)}
               /> : <h4>{todo.data}</h4>}
             </div>
