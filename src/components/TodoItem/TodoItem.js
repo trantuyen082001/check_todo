@@ -21,8 +21,9 @@ const TodoItem = ({todo}) => {
         ...todo,
         data: name
       }))
+      setEditTable(!editTable)}
     }
-  }
+  
   
   return (
       

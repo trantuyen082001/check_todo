@@ -16,7 +16,7 @@ export const todoReducers = (state = todos, action) => {
     switch(action.type) {
         case ADD_TODO:
             newTodos = [...state];
-            if(/^\s+$/.test(action.payload.data)) {
+            if(/^\s+$/.test(action.payload.data) || action.payload.data.length === 0) {
                 return;
             } else {
                 newTodos.push(action.payload);
